@@ -2,29 +2,15 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
     content: [
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
         extend: {
             colors: {
                 primary: {
                     DEFAULT: "#3b82f6",
-                    50: "#eff6ff",
-                    100: "#dbeafe",
-                    200: "#bfdbfe",
-                    300: "#93c5fd",
-                    400: "#60a5fa",
-                    500: "#3b82f6",
-                    600: "#2563eb",
-                    700: "#1d4ed8",
-                    800: "#1e40af",
-                    900: "#1e3a8a",
-                    950: "#172554",
-                },
-                secondary: {
-                    DEFAULT: "#1d4ed8",
                     50: "#eff6ff",
                     100: "#dbeafe",
                     200: "#bfdbfe",
@@ -48,16 +34,15 @@ const config: Config = {
                     700: "#334155",
                     800: "#1e293b",
                     900: "#0f172a",
-                    950: "#020617",
                 },
-            },boxShadow: {
+            },
+            boxShadow: {
                 soft: "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
                 card: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
             },
             animation: {
                 "fade-in": "fadeIn 0.5s ease-in-out",
                 "slide-up": "slideUp 0.5s ease-out",
-                "scale-in": "scaleIn 0.3s ease-out",
             },
             keyframes: {
                 fadeIn: {
@@ -67,10 +52,6 @@ const config: Config = {
                 slideUp: {
                     "0%": { transform: "translateY(20px)", opacity: "0" },
                     "100%": { transform: "translateY(0)", opacity: "1" },
-                },
-                scaleIn: {
-                    "0%": { transform: "scale(0.95)", opacity: "0" },
-                    "100%": { transform: "scale(1)", opacity: "1" },
                 },
             },
         },

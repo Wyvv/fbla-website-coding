@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
     title: "School Lost & Found",
-    description: "Help reunite students and staff with their lost belongings",
+    description: "Modern lost and found system for schools",
 };
 
 export default function RootLayout({
@@ -18,9 +15,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <body className="bg-slate-50 min-h-screen">
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="pt-20">{children}</main>
         <Footer />
         </body>
         </html>
